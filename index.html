@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Varlaam · Projects</title>
+<meta name="description" content="Apps, tools and plugins by Varlaam: Snowdrop, Blossom, PyMC and more.">
+<link rel="icon" href="img/snowdrop.png">
+<style>
+:root {
+  --bg: #fbf7f8;
+  --card: #ffffff;
+  --text: #1d1b1c;
+  --muted: #6c6468;
+  --line: #eadfe3;
+  --accent: #e0457b;
+  --accent-soft: #fde8ef;
+  --shadow: 0 1px 2px rgba(60, 20, 40, .06), 0 8px 24px rgba(60, 20, 40, .06);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141113;
+    --card: #1e1a1c;
+    --text: #f4eef1;
+    --muted: #a69da2;
+    --line: #2e282b;
+    --accent: #ff6fa0;
+    --accent-soft: #35202a;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141113;
+  --card: #1e1a1c;
+  --text: #f4eef1;
+  --muted: #a69da2;
+  --line: #2e282b;
+  --accent: #ff6fa0;
+  --accent-soft: #35202a;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px rgba(0, 0, 0, .35);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
+}
+a { color: inherit; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 0 16px; }
+header { padding: 72px 0 40px; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.4rem); line-height: 1.08; margin: 0 0 14px; letter-spacing: -.02em; }
+h1 span { color: var(--accent); }
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 36em; margin: 0 0 20px; }
+.links { display: flex; flex-wrap: wrap; gap: 10px; }
+.pill {
+  display: inline-block; padding: 8px 16px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--card);
+  text-decoration: none; font-size: .95rem;
+}
+.pill:hover { border-color: var(--accent); }
+.pill.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+h2 { font-size: 1.5rem; margin: 48px 0 16px; letter-spacing: -.01em; }
+.featured { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 20px;
+  padding: 22px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px;
+}
+.card .top { display: flex; align-items: center; gap: 14px; }
+.card img { width: 56px; height: 56px; border-radius: 13px; flex: none; }
+.card .glyph {
+  width: 56px; height: 56px; border-radius: 13px; flex: none; display: grid; place-items: center;
+  background: var(--accent-soft); color: var(--accent); font: 600 1.3rem ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.card h3 { margin: 0; font-size: 1.2rem; }
+.card .tag { color: var(--muted); font-size: .88rem; }
+.card p { margin: 0; color: var(--muted); }
+.card ul { margin: 0; padding-left: 1.1em; color: var(--muted); }
+.card .actions { margin-top: auto; padding-top: 6px; display: flex; flex-wrap: wrap; gap: 8px; }
+.card .actions a {
+  font-size: .9rem; padding: 6px 12px; border-radius: 999px; text-decoration: none;
+  border: 1px solid var(--line);
+}
+.card .actions a.main { background: var(--accent); border-color: var(--accent); color: #fff; }
+.card .actions a:hover { border-color: var(--accent); }
+.debut {
+  background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; padding: 22px;
+  display: grid; gap: 6px;
+}
+.debut h3 { margin: 0; }
+.debut p { margin: 0; color: var(--muted); }
+.badge {
+  display: inline-block; font-size: .75rem; padding: 2px 9px; border-radius: 999px;
+  background: var(--accent); color: #fff; margin-left: 8px; vertical-align: middle;
+}
+footer { padding: 56px 0 48px; color: var(--muted); font-size: .9rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .card { transition: transform .15s ease, box-shadow .15s ease; }
+  .card:hover { transform: translateY(-2px); }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Hi, I'm <span>Varlaam</span>.</h1>
+    <p class="lead">I build Mac apps, Minecraft plugins and small tools. Everything here is open source and was written as a learning project that grew into something I use every day.</p>
+    <div class="links">
+      <a class="pill primary" href="#projects">See projects</a>
+      <a class="pill" href="https://github.com/varla-am">GitHub</a>
+    </div>
+  </header>
+
+  <main>
+    <h2 id="projects">Main projects</h2>
+    <div class="featured">
+      <article class="card">
+        <div class="top">
+          <img src="img/snowdrop.png" alt="" width="56" height="56">
+          <div><h3>Snowdrop</h3><div class="tag">macOS · Swift</div></div>
+        </div>
+        <p>A minimal YouTube Music and YouTube player for the Mac, forked from Kaset.</p>
+        <ul>
+          <li>Floating glass sidebar and player bar</li>
+          <li>YouTube with Shorts, captions and a floating mini player</li>
+          <li>Themes, adjustable blur and transparency, automatic updates</li>
+        </ul>
+        <div class="actions">
+          <a class="main" href="https://github.com/varla-am/kaset-snowdrop/releases/latest">Download</a>
+          <a href="https://github.com/varla-am/kaset-snowdrop">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <img src="img/blossom.png" alt="" width="56" height="56">
+          <div><h3>Blossom</h3><div class="tag">macOS · Swift</div></div>
+        </div>
+        <p>A tiny Spotlight-style launcher: press a hotkey, type a command, and things happen.</p>
+        <ul>
+          <li>Commands for dark mode, sleep, lock, volume and more</li>
+          <li>Web search with your engine of choice</li>
+          <li>Three themes, no network access</li>
+        </ul>
+        <div class="actions">
+          <a class="main" href="https://github.com/varla-am/Blossom/releases/latest">Download</a>
+          <a href="https://github.com/varla-am/Blossom">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="glyph">py</div>
+        <div><h3 style="margin:0">PyMC</h3><div class="tag">Paper plugin · Java, Python</div></div>
+        <p>Commands and events for a Minecraft Paper server, written in real Python instead of Skript.</p>
+        <ul>
+          <li>Triggers like <code>/gift {player} {item}</code> in a few lines</li>
+          <li>Events, hot reload and exact line numbers for script errors</li>
+          <li>Works with the server's Python or GraalPy</li>
+        </ul>
+        <div class="actions">
+          <a class="main" href="https://github.com/varla-am/PyMC">Source</a>
+        </div>
+      </article>
+    </div>
+
+    <h2>More</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="top">
+          <img src="img/sakura.png" alt="" width="56" height="56">
+          <div><h3>Sakura</h3><div class="tag">macOS browser</div></div>
+        </div>
+        <p>A minimal, private browser with an Arc-style sidebar, tracker blocking and Safari Web Extensions.</p>
+        <div class="actions">
+          <a class="main" href="https://github.com/varla-am/sakuraWeb/releases/latest">Download</a>
+          <a href="https://github.com/varla-am/sakuraWeb">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="top">
+          <img src="img/cozybubbles.png" alt="" width="56" height="56">
+          <div><h3>CozyBubbles</h3><div class="tag">Claude Code plugin</div></div>
+        </div>
+        <p>Puts the messages in Claude Code into rounded, colored bubbles with foldable details.</p>
+        <div class="actions">
+          <a class="main" href="https://github.com/varla-am/cc-plugin-cozybubbles">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="glyph">EFI</div>
+        <div><h3 style="margin:0">macEFI</h3><div class="tag">Python script</div></div>
+        <p>Builds a Hackintosh EFI for Intel laptops from a hardware report, with OpenCore, kexts and a report explaining every choice.</p>
+        <div class="actions">
+          <a class="main" href="https://github.com/varla-am/macefi">Source</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="glyph">Arch</div>
+        <div><h3 style="margin:0">Archittos Install</h3><div class="tag">Bash script</div></div>
+        <p>An unofficial install script for a clean Arch Linux setup.</p>
+        <div class="actions">
+          <a class="main" href="https://github.com/varla-am/archittos-install">Source</a>
+        </div>
+      </article>
+    </div>
+
+    <h2>Where it started</h2>
+    <div class="debut">
+      <h3>SwiftClicker <span class="badge">first project</span></h3>
+      <p>My first Mac app: an auto clicker with an overlay and a shortcut mode, plus a small clicker game inside. It went from version 1 to 7 before I moved on to bigger things like Snowdrop.</p>
+      <div class="actions" style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+        <a class="pill primary" href="https://github.com/varla-am/SwiftClicker/releases/latest">Download 7.0</a>
+        <a class="pill" href="https://github.com/varla-am/SwiftClicker">Source</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>Made by Varlaam. Apps are not notarized: right click and choose Open the first time.</p>
+  </footer>
+</div>
+</body>
+</html>
