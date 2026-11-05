@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Archittos Install · Varlaam</title>
+<meta name="description" content="An unofficial install script for a clean Arch Linux setup.">
+<link rel="icon" href="/img/avatar.png">
+<link rel="stylesheet" href="/style.css">
+<script>document.documentElement.className+=' js'</script>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top"><a class="brand" href="/"><img src="/img/avatar.png" alt="">Varlaam</a><ul><li><a href="/">Home</a></li><li><a href="/projects/" aria-current="page">Projects</a></li><li><a href="/other.html">Other</a></li><li><a href="/about.html">About</a></li></ul></nav>
+  <div class="crumbs rise" style="--i:0"><a href="/projects/">Projects</a> <span>/</span> Archittos Install</div>
+  <header class="phead">
+    <div class="petals" aria-hidden="true"><i style="--x:6%;--d:0s;--s:14s;--r:20deg;--z:0.8"></i><i style="--x:18%;--d:3s;--s:17s;--r:-30deg;--z:0.6"></i><i style="--x:31%;--d:7s;--s:15s;--r:40deg;--z:1"></i><i style="--x:47%;--d:1s;--s:19s;--r:-10deg;--z:0.7"></i><i style="--x:60%;--d:5s;--s:16s;--r:55deg;--z:0.9"></i><i style="--x:72%;--d:9s;--s:18s;--r:-45deg;--z:0.6"></i><i style="--x:84%;--d:2s;--s:15s;--r:25deg;--z:1"></i><i style="--x:93%;--d:6s;--s:17s;--r:-20deg;--z:0.7"></i></div>
+    <div class="ptitle rise" style="--i:1"><div class="glyph">Arch</div>
+      <div><h1>Archittos Install </h1><div class="tag">Bash script </div></div></div>
+    <p class="lead rise" style="--i:2">An unofficial install script for a clean Arch Linux setup.</p>
+    <div class="links rise" style="--i:3"><a class="pill primary" href="https://github.com/varla-am/archittos-install">Source</a></div>
+  </header>
+  <main class="detail">
+    <section class="reveal"><h2>About</h2><p class="prose-p">Run it from the Arch ISO and it installs Arch Linux x86_64 on the disk you choose, with the desktop environment and timezone you pick.</p></section>
+    <section><h2 class="reveal">What it does</h2><ul class="feats"><li class="reveal" style="--i:0">Flags for the EFI disk, the main disk, the desktop environment (<code>kde</code>, <code>gnome</code>, <code>xfce</code> or <code>none</code>) and the timezone</li><li class="reveal" style="--i:1"><code>--after-boot</code> runs commands once at first login, then deletes itself</li><li class="reveal" style="--i:2">Reboots by itself when it is finished</li></ul></section>
+    <div class="warn reveal"><strong>Careful.</strong> This script is for a clean install without dual boot. It destroys all data on the disk you specify. For dual boot, use the built-in archinstall. The default password is set by the script: change it with passwd.</div>
+    <div class="two">
+      <section class="reveal"><h2>Requirements</h2><ul class="plain"><li>The Arch Linux ISO, x86_64</li><li>An internet connection</li></ul></section>
+      <section class="reveal"><h2>Install</h2><ol class="steps"><li>Boot the Arch ISO and connect to Wi-Fi with <code>iwctl</code>.</li><li>Clone the repository and run <code>./installscript.sh</code>.</li></ol></section>
+    </div>
+    <div class="reveal"><div class="code"><div class="code-h">Install</div><pre><code>git clone https://github.com/varla-am/archittos-install.git
+cd archittos-install
+./installscript.sh</code></pre></div></div>
+    
+    <nav class="pager reveal">
+      <a href="/projects/macefi/"><span>← Previous</span>macEFI</a>
+      <a href="/projects/snowdrop/"><span>Next →</span>Snowdrop</a>
+    </nav>
+  </main>
+  <footer class="reveal">
+    <p>Made by Varlaam. Apps are not notarized: right click and choose Open the first time.</p>
+  </footer>
+</div>
+<script src="/script.js" defer></script>
+</body>
+</html>

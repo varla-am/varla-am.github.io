@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>macEFI · Varlaam</title>
+<meta name="description" content="Builds a Hackintosh EFI for you.">
+<link rel="icon" href="/img/avatar.png">
+<link rel="stylesheet" href="/style.css">
+<script>document.documentElement.className+=' js'</script>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top"><a class="brand" href="/"><img src="/img/avatar.png" alt="">Varlaam</a><ul><li><a href="/">Home</a></li><li><a href="/projects/" aria-current="page">Projects</a></li><li><a href="/other.html">Other</a></li><li><a href="/about.html">About</a></li></ul></nav>
+  <div class="crumbs rise" style="--i:0"><a href="/projects/">Projects</a> <span>/</span> macEFI</div>
+  <header class="phead">
+    <div class="petals" aria-hidden="true"><i style="--x:6%;--d:0s;--s:14s;--r:20deg;--z:0.8"></i><i style="--x:18%;--d:3s;--s:17s;--r:-30deg;--z:0.6"></i><i style="--x:31%;--d:7s;--s:15s;--r:40deg;--z:1"></i><i style="--x:47%;--d:1s;--s:19s;--r:-10deg;--z:0.7"></i><i style="--x:60%;--d:5s;--s:16s;--r:55deg;--z:0.9"></i><i style="--x:72%;--d:9s;--s:18s;--r:-45deg;--z:0.6"></i><i style="--x:84%;--d:2s;--s:15s;--r:25deg;--z:1"></i><i style="--x:93%;--d:6s;--s:17s;--r:-20deg;--z:0.7"></i></div>
+    <div class="ptitle rise" style="--i:1"><div class="glyph">EFI</div>
+      <div><h1>macEFI </h1><div class="tag">Python script </div></div></div>
+    <p class="lead rise" style="--i:2">Builds a Hackintosh EFI for you.</p>
+    <div class="links rise" style="--i:3"><a class="pill primary" href="https://github.com/varla-am/macefi">Source</a></div>
+  </header>
+  <main class="detail">
+    <section class="reveal"><h2>About</h2><p class="prose-p">Point it at a hardware report and get a folder with OpenCore, the right kexts, the right SSDTs and a config.plist with your framebuffer, audio layout and SMBIOS filled in, plus a report that explains every choice.</p></section>
+    <section><h2 class="reveal">What it does</h2><ul class="feats"><li class="reveal" style="--i:0">Covers Intel laptops, 6th to 10th generation Core (U, H and Y)</li><li class="reveal" style="--i:1">Shows a plan before anything is downloaded</li><li class="reveal" style="--i:2">Writes <code>build.json</code> with the versions and SHA-256 of everything it downloaded</li><li class="reveal" style="--i:3">Writes <code>report.md</code>: what was chosen, what to do by hand and what might go wrong</li><li class="reveal" style="--i:4">Says so instead of guessing when the hardware is out of scope: desktops, AMD and 11th gen or newer</li></ul></section>
+    
+    <div class="two">
+      <section class="reveal"><h2>Requirements</h2><ul class="plain"><li>Python 3.9 or newer</li><li>git</li><li>An internet connection (kexts and OpenCore come from their GitHub releases)</li></ul></section>
+      <section class="reveal"><h2>Install</h2><ol class="steps"><li>Clone the repository.</li><li>Run <code>install.command</code> (macOS), <code>install.sh</code> (Linux) or <code>install.bat</code> (Windows). It only adds a <code>macefi</code> alias to your shell.</li><li>Open a new terminal.</li></ol></section>
+    </div>
+    <div class="reveal"><div class="code"><div class="code-h">Use</div><pre><code>macefi detect                 # Linux or Windows: reads the hardware directly
+macefi plan --hw report.json  # see the plan before anything is downloaded</code></pre></div></div>
+    
+    <nav class="pager reveal">
+      <a href="/projects/cozybubbles/"><span>← Previous</span>CozyBubbles</a>
+      <a href="/projects/archittos/"><span>Next →</span>Archittos Install</a>
+    </nav>
+  </main>
+  <footer class="reveal">
+    <p>Made by Varlaam. Apps are not notarized: right click and choose Open the first time.</p>
+  </footer>
+</div>
+<script src="/script.js" defer></script>
+</body>
+</html>

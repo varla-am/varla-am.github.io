@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PyMC · Varlaam</title>
+<meta name="description" content="Commands and events for a Minecraft Paper server, written in real Python instead of Skript.">
+<link rel="icon" href="/img/avatar.png">
+<link rel="stylesheet" href="/style.css">
+<script>document.documentElement.className+=' js'</script>
+</head>
+<body>
+<div class="wrap">
+  <nav class="top"><a class="brand" href="/"><img src="/img/avatar.png" alt="">Varlaam</a><ul><li><a href="/">Home</a></li><li><a href="/projects/" aria-current="page">Projects</a></li><li><a href="/other.html">Other</a></li><li><a href="/about.html">About</a></li></ul></nav>
+  <div class="crumbs rise" style="--i:0"><a href="/projects/">Projects</a> <span>/</span> PyMC</div>
+  <header class="phead">
+    <div class="petals" aria-hidden="true"><i style="--x:6%;--d:0s;--s:14s;--r:20deg;--z:0.8"></i><i style="--x:18%;--d:3s;--s:17s;--r:-30deg;--z:0.6"></i><i style="--x:31%;--d:7s;--s:15s;--r:40deg;--z:1"></i><i style="--x:47%;--d:1s;--s:19s;--r:-10deg;--z:0.7"></i><i style="--x:60%;--d:5s;--s:16s;--r:55deg;--z:0.9"></i><i style="--x:72%;--d:9s;--s:18s;--r:-45deg;--z:0.6"></i><i style="--x:84%;--d:2s;--s:15s;--r:25deg;--z:1"></i><i style="--x:93%;--d:6s;--s:17s;--r:-20deg;--z:0.7"></i></div>
+    <div class="ptitle rise" style="--i:1"><div class="glyph">py</div>
+      <div><h1>PyMC </h1><div class="tag">Paper plugin · Java, Python <span class="ver">3.0.0 alpha</span></div></div></div>
+    <p class="lead rise" style="--i:2">Commands and events for a Minecraft Paper server, written in real Python instead of Skript.</p>
+    <div class="links rise" style="--i:3"><a class="pill primary" href="https://github.com/varla-am/PyMC">Source</a></div>
+  </header>
+  <main class="detail">
+    <section class="reveal"><h2>About</h2><p class="prose-p">Scripts are plain Python files in the server&#x27;s plugin folder. A script declares a command or an event, and the rest of the file runs when someone uses the command or the event happens.</p></section>
+    <section><h2 class="reveal">What it does</h2><ul class="feats"><li class="reveal" style="--i:0">Command patterns like <code>/gift {player} {item} [amount]</code> with required and optional arguments</li><li class="reveal" style="--i:1">Events such as <code>join</code>, <code>break</code> and <code>place</code>, like Skript's <code>on join:</code></li><li class="reveal" style="--i:2"><code>/pymc reload &lt;script&gt;</code> checks the script and tells you exactly which line is wrong</li><li class="reveal" style="--i:3">Runs with the machine's Python, or with GraalPy inside the server's own JVM when Python is not installed</li></ul></section>
+    
+    <div class="two">
+      <section class="reveal"><h2>Requirements</h2><ul class="plain"><li>Paper 1.21 or newer</li><li>Java 21 or newer</li><li>Optional: Python 3.9+ on the host. Without it, GraalPy is downloaded once on first start (about 150 MB)</li></ul></section>
+      <section class="reveal"><h2>Install</h2><ol class="steps"><li>Drop <code>PyMC-3.0.0-alpha.jar</code> into <code>plugins/</code> of your Paper server and start it.</li><li>Put scripts into <code>plugins/PyMC/scripts/</code>, then run <code>/pymc reload</code>.</li></ol></section>
+    </div>
+    <div class="reveal"><div class="code"><div class="code-h">plugins/PyMC/scripts/gift.py</div><pre><code>from pymc import mcmod, mccommand
+
+mcmod.triggerCommand(&quot;/gift {player} {item} [amount]&quot;)
+
+mccommand.execute.console(f&quot;/give {player} {item} {amount or 1}&quot;)
+mccommand.broadcast(f&quot;&amp;6{mcmod.sender} gave {player} some {item}&quot;)</code></pre></div></div>
+    <p class="note reveal">PyMC is in alpha, so things can still change.</p>
+    <nav class="pager reveal">
+      <a href="/projects/blossom/"><span>← Previous</span>Blossom</a>
+      <a href="/projects/sakura/"><span>Next →</span>Sakura</a>
+    </nav>
+  </main>
+  <footer class="reveal">
+    <p>Made by Varlaam. Apps are not notarized: right click and choose Open the first time.</p>
+  </footer>
+</div>
+<script src="/script.js" defer></script>
+</body>
+</html>

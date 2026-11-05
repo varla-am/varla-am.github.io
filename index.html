@@ -5,75 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Varlaam · Home</title>
 <meta name="description" content="Apps, tools and plugins by Varlaam.">
-<link rel="icon" href="img/avatar.png">
-<link rel="stylesheet" href="style.css">
+<link rel="icon" href="/img/avatar.png">
+<link rel="stylesheet" href="/style.css">
+<script>document.documentElement.className+=' js'</script>
 </head>
 <body>
 <div class="wrap">
-  <nav class="top"><a class="brand" href="index.html"><img src="img/avatar.png" alt="">Varlaam</a><ul><li><a href="index.html" aria-current="page">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="other.html">Other</a></li><li><a href="about.html">About</a></li></ul></nav>
-  <header>
-    <h1>Hi, I'm <span>Varlaam</span>.</h1>
-    <p class="lead">I build Mac apps, Minecraft plugins and small tools. Everything here is open source and was written as a learning project that grew into something I use every day.</p>
-    <div class="links">
-      <a class="pill primary" href="projects.html">See projects</a>
-      <a class="pill" href="about.html">About me</a>
+<nav class="top"><a class="brand" href="/"><img src="/img/avatar.png" alt="">Varlaam</a><ul><li><a href="/" aria-current="page">Home</a></li><li><a href="/projects/">Projects</a></li><li><a href="/other.html">Other</a></li><li><a href="/about.html">About</a></li></ul></nav>  <header class="hero">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="petals" aria-hidden="true"><i style="--x:6%;--d:0s;--s:14s;--r:20deg;--z:0.8"></i><i style="--x:18%;--d:3s;--s:17s;--r:-30deg;--z:0.6"></i><i style="--x:31%;--d:7s;--s:15s;--r:40deg;--z:1"></i><i style="--x:47%;--d:1s;--s:19s;--r:-10deg;--z:0.7"></i><i style="--x:60%;--d:5s;--s:16s;--r:55deg;--z:0.9"></i><i style="--x:72%;--d:9s;--s:18s;--r:-45deg;--z:0.6"></i><i style="--x:84%;--d:2s;--s:15s;--r:25deg;--z:1"></i><i style="--x:93%;--d:6s;--s:17s;--r:-20deg;--z:0.7"></i></div>
+    <h1 class="rise" style="--i:0">Hi, I'm <span>Varlaam</span>.</h1>
+    <p class="lead rise" style="--i:1">I build Mac apps, Minecraft plugins and small tools. Everything here is open source and was written as a learning project that grew into something I use every day.</p>
+    <div class="links rise" style="--i:2">
+      <a class="pill primary" href="/projects/">See projects</a>
+      <a class="pill" href="/about.html">About me</a>
       <a class="pill" href="https://github.com/varla-am">GitHub</a>
     </div>
   </header>
   <main>
-    <h2>Featured</h2>
+    <h2 class="reveal">Featured</h2>
     <div class="featured">
-      <article class="card">
-        <div class="top">
-          <img src="img/snowdrop.png" alt="" width="56" height="56">
-          <div><h3>Snowdrop</h3><div class="tag">macOS · Swift</div></div>
-        </div>
+      <article class="card reveal" style="--i:0">
+        <div class="top"><img src="/img/snowdrop.png" alt="" width="56" height="56"><div><h3>Snowdrop</h3><div class="tag">macOS · Swift</div></div></div>
         <p>A minimal YouTube Music and YouTube player for the Mac, forked from Kaset.</p>
-        <ul>
-          <li>Floating glass sidebar and player bar</li>
-          <li>YouTube with Shorts, captions and a floating mini player</li>
-          <li>Themes, adjustable blur and transparency, automatic updates</li>
-        </ul>
-        <div class="actions">
-          <a class="main" href="https://github.com/varla-am/kaset-snowdrop/releases/latest">Download</a>
-          <a href="https://github.com/varla-am/kaset-snowdrop">Source</a>
-        </div>
+        <ul><li>YouTube Music: recommendations organized like the original client, in a floating glass sidebar</li><li>YouTube mode: switch with one button at the bottom of the sidebar, with topic chips and a grid like the real home page</li><li>Shorts: a vertical player with like, dislike, share and next/previous buttons</li></ul>
+        <div class="actions"><a href="/projects/snowdrop/">Details</a><a class="main" href="https://github.com/varla-am/kaset-snowdrop/releases/latest">Download</a><a href="https://github.com/varla-am/kaset-snowdrop">Source</a></div>
       </article>
-      <article class="card">
-        <div class="top">
-          <img src="img/blossom.png" alt="" width="56" height="56">
-          <div><h3>Blossom</h3><div class="tag">macOS · Swift</div></div>
-        </div>
+      <article class="card reveal" style="--i:1">
+        <div class="top"><img src="/img/blossom.png" alt="" width="56" height="56"><div><h3>Blossom</h3><div class="tag">macOS · Swift</div></div></div>
         <p>A tiny Spotlight-style launcher: press a hotkey, type a command, and things happen.</p>
-        <ul>
-          <li>Commands for dark mode, sleep, lock, volume and more</li>
-          <li>Web search with your engine of choice</li>
-          <li>Three themes, no network access</li>
-        </ul>
-        <div class="actions">
-          <a class="main" href="https://github.com/varla-am/Blossom/releases/latest">Download</a>
-          <a href="https://github.com/varla-am/Blossom">Source</a>
-        </div>
+        <ul><li>Commands: toggle light and dark mode, screensaver, sleep, lock screen, logout, volume and more</li><li>Web search: <code>search cats</code> opens the results in your browser. Pick Google, DuckDuckGo, Bing, Brave, Ecosia, Startpage, Yandex or your own address</li><li>Three themes: Aqua, Default (Big Sur to Sequoia) and Liquid Glass</li></ul>
+        <div class="actions"><a href="/projects/blossom/">Details</a><a class="main" href="https://github.com/varla-am/Blossom/releases/latest">Download</a><a href="https://github.com/varla-am/Blossom">Source</a></div>
       </article>
-      <article class="card">
-        <div class="glyph">py</div>
-        <div><h3 style="margin:0">PyMC</h3><div class="tag">Paper plugin · Java, Python</div></div>
+      <article class="card reveal" style="--i:2">
+        <div class="top"><div class="glyph">py</div><div><h3>PyMC</h3><div class="tag">Paper plugin · Java, Python</div></div></div>
         <p>Commands and events for a Minecraft Paper server, written in real Python instead of Skript.</p>
-        <ul>
-          <li>Triggers like <code>/gift {player} {item}</code> in a few lines</li>
-          <li>Events, hot reload and exact line numbers for script errors</li>
-          <li>Works with the server's Python or GraalPy</li>
-        </ul>
-        <div class="actions">
-          <a class="main" href="https://github.com/varla-am/PyMC">Source</a>
-        </div>
+        <ul><li>Command patterns like <code>/gift {player} {item} [amount]</code> with required and optional arguments</li><li>Events such as <code>join</code>, <code>break</code> and <code>place</code>, like Skript's <code>on join:</code></li><li><code>/pymc reload &lt;script&gt;</code> checks the script and tells you exactly which line is wrong</li></ul>
+        <div class="actions"><a href="/projects/pymc/">Details</a><a class="main" href="https://github.com/varla-am/PyMC">Source</a></div>
       </article>
     </div>
-    <a class="more-link" href="projects.html">All projects →</a>
+    <a class="more-link reveal" href="/projects/">All projects →</a>
   </main>
-  <footer>
+  <footer class="reveal">
     <p>Made by Varlaam. Apps are not notarized: right click and choose Open the first time.</p>
   </footer>
 </div>
+<script src="/script.js" defer></script>
 </body>
 </html>
